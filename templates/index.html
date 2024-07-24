@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Chika Feldie - Top{% endblock %}
+
+{% block content %}
+<div class="container text-center">
+    <img class="band-logo" src="{{ url_for('static', filename='img/バンドロゴ白.png') }}" alt="logo Image" class="img-fluid">
+</div>
+<div class="container text-center">
+    <img class="band-photo rounded-border" src="{{ url_for('static', filename='img/アー写1.jpg') }}" alt="Band Photo" class="img-fluid">
+</div>
+<!--スペースちゃんと作ること。-->
+<div class="member-list">
+    <h3>Member</h3>
+    <p>Bansei Komori (Vo, Sax)</p>
+    <p>Gin Ikeda (Vo, Gt)</p>
+    <p>Taichi Shimizu (Cho, Key)</p>
+    <p>Ryohei Imai (Cho, Ba)</p>
+    <p>Kazuto Iwasaki (Cho, Dr)</p>
+</div>
+{% endblock %}

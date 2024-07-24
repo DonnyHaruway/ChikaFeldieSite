@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Chika Feldie - Works{% endblock %}
+
+{% block content %}
+    <h2>Single</h2>
+        <div class="works-box">
+    <img src="{{ url_for('static', filename='img/ジャケット_恥さらし.png') }}" alt="恥さらし" class="img-fluid vinyl-img">
+    「恥さらし」
+        </div>
+        <div class="works-box">
+    <img src="{{ url_for('static', filename='img/ジャケット_夏もとどめ.png') }}" alt="夏もとどめ" class="img-fluid vinyl-img">
+    「夏もとどめ」
+</div>
+<!-- 追加のシングル情報 -->
+
+{% endblock %}
