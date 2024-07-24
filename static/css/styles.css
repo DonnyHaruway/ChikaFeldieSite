@@ -1,0 +1,174 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    color:  rgb(79,99,43); /* 文字色を濃い緑に設定 */
+    line-height: 1.6;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    background-color: white; /* 背景色を白に設定 */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+main {
+    margin-top: 0px;
+    border: 0px;
+    padding: 0px;
+    text-align: center;
+    background-color: white; /* 透明に設定 */
+    min-height: 100vh;
+}
+
+/* 各ページの余白を設定する */
+.content-box {
+    background-color: white;
+    color: rgb(79, 99, 43);
+    margin: 0px;
+    border: 0px;
+    padding: 100px;
+}
+
+
+/* ジャケット名だけのフォント */
+
+h5 {
+    font-family: 'Noto Sans JP', sans-serif;
+    color: rgb(79, 99, 43);
+}
+
+/* ヘッダーの背景色を変更 */
+.header {
+    background-color: white; /* お好みの色に変更 */
+    color: rgb(79,99,43);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* ナビゲーションリンクとソーシャルリンクの色を変更 */
+.custom-link-color {
+    color: rgb(79,99,43); /* 色を設定 */
+}
+
+/* フッターの背景色を変更 */
+.footer {
+    background-color: white; /* お好みの色に変更 */
+    color: rgb(79,99,43);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* index.html */
+
+.band-photo {
+    background-color: transparent; /* 透明に設定 */
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+.band-photo img {
+    max-width: 0px;
+    height: auto;
+    border: 0px;
+    border-radius: 10px;
+}
+
+.member-list {
+    padding: auto;
+    border: 100px;
+    margin: 80px;
+    background-color: white;
+}
+
+.band-photo {
+    max-width: 30%;
+    border: 0px solid #fff;
+    border-radius: 10px;
+}
+
+.band-logo {
+    max-width: 15%; /* 画像の幅を15%に設定（必要に応じて変更してください） */
+    height: auto; /* アスペクト比を維持して高さを自動調整 */
+    display: block;
+    margin: auto auto 50px;
+    border: 0px solid #fff; /* 縁の色を変更する場合、この値を調整します */
+    border-radius: 0px;
+    padding: 0px;
+}
+
+.rounded-border {
+    border: 5px solid  rgb(79,99,43); /* 太枠の色と太さを指定します */
+    border-radius: 15px; /* 丸みを指定します */
+    padding: 0px; /* 画像と枠の間のスペースを指定します */
+}
+
+
+/* live_info.html */
+
+.live-info {
+    margin-bottom: 30px;
+}
+
+.live-date {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: rgb(79, 99, 43); /* 文字色を白に設定 */
+}
+
+.live-details {
+    font-size: 1.2em;
+    color: rgb(79, 99, 43); /* 文字色を白に設定 */
+}
+
+.live-details a:hover {
+    text-decoration: underline;
+}
+
+/* works.html */
+
+.vinyl-img {
+    width: 200px;  /* 任意の幅 */
+    height: auto;  /* 高さは自動調整 */
+    margin-bottom: 10px;  /* 画像とテキストの間にスペースを追加 */
+}
+
+.works-box {
+    background-color: white;
+    margin: 50px;
+    border: 0px;
+    padding: 20px;
+}
+
+/* スマートフォン用のスタイルを追加 */
+@media (max-width: 768px) {
+    main {
+        padding-top: 240px; /* ヘッダーの高さ分だけ余白を追加 */
+    }
+    
+    .header {
+        padding: 10px 0; /* ヘッダーのパディングを調整 */
+    }
+    
+    .band-photo {
+        max-width: 80%; /* 画像の幅を小さなデバイスに合わせて調整 */
+        margin: 10px auto; /* 余白を調整 */
+    }
+
+    .band-logo {
+        max-width: 40%; /* 画像の幅を小さなデバイスに合わせて調整 */
+        margin: 10px auto; /* 余白を調整 */
+    }
+    
+    .footer {
+        padding: 10px 0; /* フッターのパディングを調整 */
+    }
+}
