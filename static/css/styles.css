@@ -23,7 +23,7 @@ main {
 
 /* 各ページの余白を設定する */
 .content-box {
-    background-color: white;
+    background-color:white;
     color: rgb(79, 99, 43);
     margin: 0px;
     border: 0px;
@@ -68,17 +68,21 @@ h5 {
 /* index.html */
 
 .band-photo {
-    background-color: transparent; /* 透明に設定 */
-    margin: 0px;
-    border: 0px;
-    padding: 0px;
+    margin: 0 auto; /* 余白を調整 */
+    border: 5%;    
+    padding: 0%;
+    width: 50%;
+    height: auto;
+    display: block;
 }
 
-.band-photo img {
-    max-width: 0px;
-    height: auto;
-    border: 0px;
-    border-radius: 10px;
+.band-logo {
+     margin: 0 auto; /* 余白を調整 */
+     border: 0;
+     padding: 0%;
+     width: 30%;
+     height: auto;
+     display: block;
 }
 
 .member-list {
@@ -86,16 +90,15 @@ h5 {
     border: 100px;
     margin: 80px;
     background-color: white;
+    text-align: center;
 }
 
 .band-photo {
-    max-width: 30%;
     border: 0px solid #fff;
     border-radius: 10px;
 }
 
 .band-logo {
-    max-width: 15%; /* 画像の幅を15%に設定（必要に応じて変更してください） */
     height: auto; /* アスペクト比を維持して高さを自動調整 */
     display: block;
     margin: auto auto 50px;
@@ -152,20 +155,49 @@ h5 {
 @media (max-width: 768px) {
     main {
         padding-top: 240px; /* ヘッダーの高さ分だけ余白を追加 */
+        padding-bottom: 10%;
+        border-bottom: 0%;
+        background-color: white;
     }
     
     .header {
         padding: 10px 0; /* ヘッダーのパディングを調整 */
     }
     
+    .content-box {
+        background-color:white;
+        color: rgb(79, 99, 43);
+        margin: 50px auto 0;
+        border: 0;
+        padding: 0;
+        width: 100%;
+    }
+
     .band-photo {
-        max-width: 80%; /* 画像の幅を小さなデバイスに合わせて調整 */
-        margin: 10px auto; /* 余白を調整 */
+        margin: 0 auto; /* 余白を調整 */
+        border: 5%;    
+        padding: 0%;
+        width: 70%;
+        height: auto;
+        display: block;
     }
 
     .band-logo {
-        max-width: 40%; /* 画像の幅を小さなデバイスに合わせて調整 */
-        margin: 10px auto; /* 余白を調整 */
+         margin: 0 auto; /* 余白を調整 */
+         border: 0;
+         padding: 0%;
+         width: 40%;
+         height: auto;
+         display: block;
+    }
+
+    .member-list {
+        text-align: center;
+        width: 80%;
+        padding: auto;
+        border: 5%;
+        margin: 10% auto;
+        
     }
     
     .footer {
