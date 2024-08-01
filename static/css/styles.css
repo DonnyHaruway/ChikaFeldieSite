@@ -162,6 +162,7 @@ h5 {
     
     .header {
         padding: 10px 0; /* ヘッダーのパディングを調整 */
+        font-size: 0.8rem;
     }
     
     .content-box {
