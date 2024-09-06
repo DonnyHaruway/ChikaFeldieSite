@@ -8,18 +8,20 @@
     <meta name="description" content="This is Chika Feldie Website!">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header class="header">
-        <div class="container">
             <h1 class="band-name">Chika Feldie</h1>
-            <nav class="d-flex align-items-center">
-                <ul class="nav mr-3">
+            <nav class="nav-links">
+                <ul class="nav">
                     <li class="nav-item"><a class="nav-link custom-link-color" href="{{ url_for('index') }}">Home</a></li>
                     <li class="nav-item"><a class="nav-link custom-link-color" href="{{ url_for('live_info') }}">Live Info</a></li>
                     <li class="nav-item"><a class="nav-link custom-link-color" href="{{ url_for('weblog') }}">Weblog</a></li>
@@ -27,14 +29,13 @@
                 </ul>
                 <div class="social-links">
                     <a href="https://www.instagram.com/chikafeldie/?igshid=MzMyNGUyNmU2YQ%3D%3D" target="_blank" class="custom-link-color mx-2"><i class="fab fa-instagram"></i></a>
-                    <a href="https://x.com/feldiechika?s=21" target="_blank" class="custom-link-color mx-2"><i class="fa-brands fa-x"></i></a>
+                    <a href="https://x.com/feldiechika?s=21" target="_blank" class="custom-link-color mx-2"><i class="bi bi-twitter-x"></i></a>
                     <a href="https://music.apple.com/jp/artist/chika-feldie/1718701138?l=en-US" target="_blank" class="custom-link-color mx-2"><i class="fab fa-apple"></i></a>
                     <a href="https://open.spotify.com/artist/6hyFXJHsrhFUoE8F036F0R?si=38t5dK1rQ3q53vjrZk1d6g" target="_blank" class="custom-link-color mx-2"><i class="fab fa-spotify"></i></a>
                     <a href="https://www.tiktok.com/@chika.feldie?_t=8nPPNc8E7cr&_r=1" target="_blank" class="custom-link-color mx-2"><i class="fab fa-tiktok"></i></a>
                     <a href="https://youtube.com/@chikafeldie-sw8jw?si=BtoSu-MWsNmFlqOm" target="_blank" class="custom-link-color mx-2"><i class="fab fa-youtube"></i></a>
                 </div>
             </nav>
-        </div>
     </header>
     <main class="container" style="padding-top: 80px;">
     <div class="content-box">
