@@ -68,6 +68,7 @@ h5 {
 .social-links {
     float: right;
     background-color: white;
+
 }
 
 
@@ -81,7 +82,7 @@ h5 {
     background-color: white; /* お好みの色に変更 */
     color: rgb(79,99,43);
     text-align: center;
-    padding: 10px 0;
+    padding-top: 0%;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -139,7 +140,6 @@ h5 {
     padding: 0px; /* 画像と枠の間のスペースを指定します */
 }
 
-
 /* live_info.html */
 
 .live-info {
@@ -170,6 +170,101 @@ h5 {
     margin: 5% auto;
 }
 
+/* weblog.html */
+
+.main__inner [class*="widget-"] {
+    border-top-width: 3px;
+    font-size: 1em;
+}
+
+.main__inner [class*="widget-"] {
+    color: rgb(79,99,43);
+}
+
+.wdg__inner {
+    background-color: white;
+    padding-top: 10%;
+}
+
+.list-row, .list-row>a {
+    display: table;
+    width: 100%;
+}
+
+.list-row__detail {
+    display: table-cell;
+    padding: 10px 0;
+    width: 80%;
+    vertical-align: middle;
+    color: rgb(79,99,43);
+    border-bottom: 1px solid #ddd; /* 下に1ピクセルの線を追加 */ 
+}
+
+.tags {
+    margin-bottom: 10px;
+    letter-spacing: -0.4em;
+}
+
+.tags__date {
+    display: inline-block;
+    margin-right: 1.0em;
+    letter-spacing: normal;
+}
+.tags__icon {
+    color: #fff;
+    background-color: rgb(79,99,43);
+}
+
+.tags__icon--news {
+    min-width: 115px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.tags__icon {
+    display: inline-block;
+    min-width: 50px;
+    padding: 3px 8px 2px;
+    border-radius: 2px;
+    letter-spacing: normal;
+    font-family: Arial, Helvetica, sans-serif, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック";
+    font-size: 1.2rem;
+    line-height: 1.0;
+    text-align: center;
+}
+
+.list-row>a {
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+/* columns */
+
+.column-content{
+    padding-top: 10%;
+}
+
+.writer-name{
+    padding-top: 5%;
+}
+
+.album-intro{
+    margin-bottom: 20%;
+    width: 100%;
+}
+
+.column-album{
+    width: 50%;
+    margin: 10%;
+}
+
+.music-links{
+    overflow-wrap: break-word;
+    word-break: break-all;
+    width: 100%;
+    font-size: 0.8em;
+}
+
 /* works.html */
 
 .vinyl-img {
@@ -194,6 +289,8 @@ h5 {
 
 /* スマートフォン用のスタイルを追加 */
 @media (max-width: 768px) {
+
+    /* base.html */
     .header {
         padding: 10px 0; /* ヘッダーのパディングを調整 */
         font-size: 0.8rem;
@@ -203,6 +300,7 @@ h5 {
         float: left;
         width: 30%;
         background-color: white;
+        text-align: center;
     }
     
     .nav-links {
@@ -226,6 +324,7 @@ h5 {
     .social-links {
         width: 50%;
         background-color: white;
+        margin-top: 5%;
     }
 
     .social-links {
@@ -281,6 +380,8 @@ h5 {
         
     }
     
+    /* live_info.html */
+
     .flyer {
         width: 80%;
         margin: 5% auto;
@@ -289,5 +390,32 @@ h5 {
     .footer {
         padding: 10px 0; /* フッターのパディングを調整 */
     }
+
+    /* weblog.html */
+    .main__inner [class*="widget-"] {
+        border-top-width: 3px;
+        font-size: 1.2rem;
+    }
+
+    .wdg__inner {
+        padding: 10px 15px 20px;
+    }
+
+    .list-row, .list-row>a {
+        display: table;
+        width: 100%;
+    }
+
+    .list-row__detail {
+        display: table-cell;
+        padding: 5px 0;
+        vertical-align: top;
+    }
+
+    .weblog-title {
+        font-size: 0.7em;
+    }
+
+    /* works.html*/
     
 }

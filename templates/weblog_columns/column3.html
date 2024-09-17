@@ -3,10 +3,26 @@
 {% block title %}Chika Feldie - Weblog - column3{% endblock %}
 
 {% block content %}
+<!-- title -->
 <h3>気まぐれコラム#3</h3>
-
-
-This Will Be Our Year / The Zombies
-学生の時、席替えをしたらなんとなく気になってる女の子と隣同士になっても、カッコつけちゃって上手く会話ってできないですよね。でも僕が授業を聞いてなくて先生に怒られていると、いつも隣でクスクス笑っているあの子みたいな曲です。多分
-教室の窓から気持ちいい風が吹いて、カーテンでも揺らしているはずです。 by今井凌平(Ba.Cho)
+<!-- column-content -->
+<div class="column-content">
+    学生の時、席替えをしたらなんとなく気になってる女の子と隣同士になっても、カッコつけちゃって上手く会話ってできないですよね。でも僕が授業を聞いてなくて先生に怒られていると、いつも隣でクスクス笑っているあの子みたいな曲です。多分
+    教室の窓から気持ちいい風が吹いて、カーテンでも揺らしているはずです。 
+    <p class="writer-name">
+        by 今井凌平(Ba.Cho) 
+    </p>
+</div>
+<div class="album-intro">
+    <!-- album-image -->
+    <img class="column-album rounded-border" src="{{ url_for('static', filename='img/column_albums/column3.jpg') }}" alt="column-album"><br>
+    <!-- Song / Artist -->
+    This Will Be Our Year / The Zombies<br>
+    <br>
+    Spotify<br>
+    <!-- album-links -->
+    <a class="music-links" href="https://open.spotify.com/intl-ja/track/5mNjFEWm65zdqHoVKKttv4?si=225e477e35a84455">https://open.spotify.com/intl-ja/track/5mNjFEWm65zdqHoVKKttv4?si=225e477e35a84455</a><br>
+    Apple Music<br>
+    <a class="music-links" href="https://music.apple.com/jp/album/this-will-be-our-year/1719880807?i=1719880967">https://music.apple.com/jp/album/this-will-be-our-year/1719880807?i=1719880967</a><br>
+</div>
 {% endblock %}
