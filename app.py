@@ -14,6 +14,16 @@ def live_info():
 def weblog():
     return render_template('weblog.html')
 
+# Weblogページの遷移先
+
+@app.route('/weblog/column11')
+def weblog_column11():
+    return render_template("weblog_columns/column11.html")
+
+@app.route('/weblog/column10')
+def weblog_column10():
+    return render_template("weblog_columns/column10.html")
+
 @app.route('/weblog/column9')
 def weblog_column9():
     return render_template("weblog_columns/column9.html")

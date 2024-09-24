@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}Chika Feldie - Weblog - column1{% endblock %}
+
+{% block content %}
+<!-- title -->
+<h3>気まぐれコラム＃１０</h3>
+<!-- column-content -->
+<div class="column-content">
+    かの有名なガロ出身の漫画家、つげ義春の漫画に『海辺の叙景』という作品があります。男女が海辺で出会い、次の日も会う約束をするのですが、迎えたその日は雨でした。男が女は来ないだろうと諦めかけていると、やがて女が現れ、2人で雨の中の海を泳ぎます。
+    『海辺の叙景』に憧れて撮った写真だと言及されていて、その記事を見たとき、好きなもの、良いと思ったものがこうして繋がっていたことの嬉しさを感じました。
+    とか言っていますが、僕は結構、淋しい海よりも夏休みの陽気な海が好きです。先日（9月初旬）に茅ヶ崎〜大磯〜小田原の海を見て回ったの
+    ですが、9月の海はどの浜辺も思った以上に淋しすぎます。
+    <p class="writer-name">
+        by 池田銀 (Gt.Vo)
+    </p>
+</div>
+<div class="album-intro">
+    <!-- album-image -->
+    <img class="column-album rounded-border" src="{{ url_for('static', filename='img/column_albums/column10.jpg') }}" alt="column-album"><br>
+    <!-- Song / Artist -->
+    海辺の叙景 / つげ義春<br>
+    <br>
+    Amazon<br>
+    <!-- album-links -->
+    <a class="music-links" href="https://www.amazon.co.jp/%E3%81%A4%E3%81%92%E7%BE%A9%E6%98%A5%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3-%E6%9D%8E%E3%81%95%E3%82%93%E4%B8%80%E5%AE%B6-%E6%B5%B7%E8%BE%BA%E3%81%AE%E5%8F%99%E6%99%AF-%E3%81%A1%E3%81%8F%E3%81%BE%E6%96%87%E5%BA%AB-%E3%81%A4%E3%81%92/dp/4480425438">https://www.amazon.co.jp/%E3%81%A4%E3%81%92%E7%BE%A9%E6%98%A5%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3-%E6%9D%8E%E3%81%95%E3%82%93%E4%B8%80%E5%AE%B6-%E6%B5%B7%E8%BE%BA%E3%81%AE%E5%8F%99%E6%99%AF-%E3%81%A1%E3%81%8F%E3%81%BE%E6%96%87%E5%BA%AB-%E3%81%A4%E3%81%92/dp/4480425438</a><br>
+</div>
+{% endblock %}
