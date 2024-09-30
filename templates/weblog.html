@@ -3,146 +3,54 @@
 {% block title %}Chika Feldie - Weblog{% endblock %}
 
 {% block content %}
-
 <h2 class="caption">Weblog</h2>
 <div class="main__inner">
-	<div class="main__column--02 ">
-		<article class="widget-news-all">
-			<div class="wdg__inner">
-						<!--/.list-row-->
-						<div class="list-row">
-                            <a href="/weblog/column11">
-						        <div class="list-row__detail">
-							        <p class="tags">
-								        <span class="tags__date">2024.09.20</span>
-								        <span class="tags__icon tags__icon--news">TOPICS</span>						
-                                    </p>
-							        <p class="weblog-title">気まぐれコラム＃１１</p>
-						        </div>
-	                        </a>
+    <div class="main__column--02">
+        <article class="widget-news-all">
+            <div class="wdg__inner">
+                <!-- コラムリストをループで表示 -->
+                {% for weblog in weblogs %}
+                <div class="list-row">
+                    <a href="/weblog/{{ weblog['link'] }}">
+                        <div class="list-row__detail">
+                            <p class="tags">
+                                <span class="tags__date">{{ weblog['date'] }}</span>
+                                <span class="tags__icon tags__icon--news">TOPICS</span>
+                            </p>
+                            <p class="weblog-title">{{ weblog['title'] }}</p>
                         </div>
-						<!--/.list-row-->
-						<div class="list-row">
-                            <a href="/weblog/column10">
-						        <div class="list-row__detail">
-							        <p class="tags">
-								        <span class="tags__date">2024.09.15</span>
-								        <span class="tags__icon tags__icon--news">TOPICS</span>						
-                                    </p>
-							        <p class="weblog-title">気まぐれコラム＃１０</p>
-						        </div>
-	                        </a>
-                        </div>
-                        <!--/.list-row-->
-						<div class="list-row">
-                            <a href="/weblog/column9">
-						        <div class="list-row__detail">
-							        <p class="tags">
-								        <span class="tags__date">2024.09.08</span>
-								        <span class="tags__icon tags__icon--news">TOPICS</span>						
-                                    </p>
-							        <p class="weblog-title">気まぐれコラム＃９</p>
-						        </div>
-	                        </a>
-                        </div>
-                        <!--/.list-row-->
-						<div class="list-row">
-                            <a href="/weblog/column8">
-						        <div class="list-row__detail">
-							        <p class="tags">
-								        <span class="tags__date">2024.08.31</span>
-								        <span class="tags__icon tags__icon--news">TOPICS</span>						
-                                    </p>
-							        <p class="weblog-title">気まぐれコラム＃８</p>
-						        </div>
-	                        </a>
-                        </div>
-                        <!--/.list-row-->
-						<div class="list-row">
-                            <a href="/weblog/column7">
-						        <div class="list-row__detail">
-							        <p class="tags">
-								        <span class="tags__date">2024.08.21</span>
-								        <span class="tags__icon tags__icon--news">TOPICS</span>						
-                                    </p>
-							        <p class="weblog-title">気まぐれコラム＃７</p>
-						        </div>
-	                        </a>
-                        </div>
-                        <!--/.list-row-->
-						<div class="list-row">
-                            <a href="/weblog/column6">
-						        <div class="list-row__detail">
-							        <p class="tags">
-								        <span class="tags__date">2024.08.16</span>
-								        <span class="tags__icon tags__icon--news">TOPICS</span>						
-                                    </p>
-							        <p class="weblog-title">気まぐれコラム＃６</p>
-						        </div>
-	                        </a>
-                        </div>
-                        <!--/.list-row-->
-						<div class="list-row">
-                            <a href="/weblog/column5">
-						        <div class="list-row__detail">
-							        <p class="tags">
-								        <span class="tags__date">2024.07.30</span>
-								        <span class="tags__icon tags__icon--news">TOPICS</span>						
-                                    </p>
-							        <p class="weblog-title">気まぐれコラム＃５</p>
-						        </div>
-	                        </a>
-                        </div>
-                        <!--/.list-row-->
-						<div class="list-row">
-                            <a href="/weblog/column4">
-						        <div class="list-row__detail">
-							        <p class="tags">
-								        <span class="tags__date">2024.07.01</span>
-								        <span class="tags__icon tags__icon--news">TOPICS</span>						
-                                    </p>
-							        <p class="weblog-title">気まぐれコラム＃４</p>
-						        </div>
-	                        </a>
-                        </div>
-                        <!--/.list-row-->
-						<div class="list-row">
-                            <a href="/weblog/column3">
-						        <div class="list-row__detail">
-							        <p class="tags">
-								        <span class="tags__date">2024.06.21</span>
-								        <span class="tags__icon tags__icon--news">TOPICS</span>						
-                                    </p>
-							        <p class="weblog-title">気まぐれコラム＃３</p>
-						        </div>
-	                        </a>
-                        </div>
-                        <!--/.list-row-->
-						<div class="list-row">
-                            <a href="/weblog/column2">
-						        <div class="list-row__detail">
-							        <p class="tags">
-								        <span class="tags__date">2024.06.16</span>
-								        <span class="tags__icon tags__icon--news">TOPICS</span>						
-                                    </p>
-							        <p class="weblog-title">気まぐれコラム＃２</p>
-						        </div>
-	                        </a>
-                        </div>
-                        <!--/.list-row-->
-						<div class="list-row">
-                            <a href="/weblog/column1">
-						        <div class="list-row__detail">
-							        <p class="tags">
-								        <span class="tags__date">2024.06.06</span>
-								        <span class="tags__icon tags__icon--news">TOPICS</span>						
-                                    </p>
-							        <p class="weblog-title">気まぐれコラム＃１</p>
-						        </div>
-	                        </a>
-                        </div>
+                    </a>
+                </div>
+                {% endfor %}
             </div>
         </article>
-	</div>
+
+        <!-- ページネーションリンク (中央寄せ) -->
+        <nav aria-label="Page navigation" class="weblog-nav">
+            <ul class="pagination d-flex justify-content-center">
+                {% if page > 1 %}
+                <li class="page-item">
+                    <a class="page-link" href="/weblog?page={{ page - 1 }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+
+                {% for i in range(1, total_pages + 1) %}
+                <li class="page-item {% if i == page %}active{% endif %}">
+                    <a class="page-link" href="/weblog?page={{ i }}">{{ i }}</a>
+                </li>
+                {% endfor %}
+
+                {% if page < total_pages %}
+                <li class="page-item">
+                    <a class="page-link" href="/weblog?page={{ page + 1 }}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
 </div>
 {% endblock %}

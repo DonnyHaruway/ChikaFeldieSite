@@ -1,0 +1,38 @@
+ChikaFeldieSite/
+│
+│
+├── static/
+│   ├── css/
+│   │		┗ style.css
+│   │
+│   └── img/
+│			┠ album_cover/
+│			┃			┠ ジャケット_夏もとどめ.png
+│			┃			┗ ジャケット_恥さらし.png
+│			┃
+│			┃
+│			┠ column_albums/
+│			┃			　┠ column1-1.jpg
+│			┃			  ┠ ・・・
+│			┃				
+│			┃
+┃			┃
+│			┠ flyers/
+│			┃		┠ 20240923Flyer.jpg
+│			┃		┠ ・・・
+│			┃		
+│			┠ アー写1.jpg
+│			┗ バンドロゴ白.png
+│
+│
+├── templates/
+│   └── weblog_columns/
+│	 ┃				┠ column1.html
+│	 ┃				┠ ・・・
+│	 ┠ base.html
+│	 ┠ index.html
+│	 ┠ weblog.html
+│	 ┠ works.html
+│
+│
+└── app.py

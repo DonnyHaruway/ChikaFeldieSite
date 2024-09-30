@@ -86,6 +86,7 @@ h5 {
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: +1;
 }
 
 .caption {
@@ -238,6 +239,30 @@ h5 {
     transition: background 0.3s;
 }
 
+/* weblogページのナビゲーションリンク */
+
+.weblog-nav{
+    margin-bottom: 10%;
+}
+
+/* ページネーションのリンク全体のスタイル */
+.pagination a {
+    color: rgb(79,99,43); /* リンクの文字色 (通常時) */
+    text-decoration: none; /* リンクの下線を消す */
+}
+
+/* ページネーションのリンクにホバーしたときのスタイル */
+.pagination a:hover {
+    color: rgb(79,99,43); /* ホバー時の文字色 */
+    text-decoration: underline; /* ホバー時に下線を追加 */
+}
+
+/* アクティブなページのリンクのスタイル */
+.pagination .page-item.active .page-link {
+    background-color: rgb(79,99,43); /* アクティブページの背景色 */
+    color: #ffffff; /* アクティブページの文字色 */
+    border-color: rgb(79,99,43); /* アクティブページの枠線色 */
+}
 /* columns */
 
 .column-content{
@@ -263,6 +288,10 @@ h5 {
     word-break: break-all;
     width: 100%;
     font-size: 0.8em;
+}
+
+.column-navigation{
+    padding-bottom: 10%;
 }
 
 /* works.html */
@@ -389,6 +418,7 @@ h5 {
     
     .footer {
         padding: 10px 0; /* フッターのパディングを調整 */
+
     }
 
     /* weblog.html */

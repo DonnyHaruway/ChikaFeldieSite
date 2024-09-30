@@ -1,6 +1,23 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+from datetime import datetime
 
 app = Flask(__name__)
+
+# 仮のコラムデータ（実際はデータベースなどから取得することを想定）
+weblogs = [
+    {"id": 1, "title": "気まぐれコラム＃１", "date": "2024.06.06", "link": "column1"},
+    {"id": 2, "title": "気まぐれコラム＃２", "date": "2024.06.16", "link": "column2"},
+    {"id": 3, "title": "気まぐれコラム＃３", "date": "2024.06.21", "link": "column3"},
+    {"id": 4, "title": "気まぐれコラム＃４", "date": "2024.07.01", "link": "column4"},
+    {"id": 5, "title": "気まぐれコラム＃５", "date": "2024.07.30", "link": "column5"},
+    {"id": 6, "title": "気まぐれコラム＃６", "date": "2024.08.16", "link": "column6"},
+    {"id": 7, "title": "気まぐれコラム＃７", "date": "2024.08.21", "link": "column7"},
+    {"id": 8, "title": "気まぐれコラム＃８", "date": "2024.08.31", "link": "column8"},
+    {"id": 9, "title": "気まぐれコラム＃９", "date": "2024.09.08", "link": "column9"},
+    {"id": 10, "title": "気まぐれコラム＃１０", "date": "2024.09.15", "link": "column10"},
+    {"id": 11, "title": "気まぐれコラム＃１１", "date": "2024.09.20", "link": "column11"},
+    {"id": 12, "title": "気まぐれコラム＃１２", "date": "2024.09.29", "link": "column12"}
+]
 
 @app.route('/')
 def index():
@@ -12,54 +29,25 @@ def live_info():
 
 @app.route('/weblog')
 def weblog():
-    return render_template('weblog.html')
+    # dateを基準に降順で並び替え
+    sorted_weblogs = sorted(weblogs, key=lambda x: datetime.strptime(x['date'], '%Y.%m.%d'), reverse=True)
+    
+    page = request.args.get('page', 1, type=int)  # URLからページ番号を取得
+    per_page = 10  # 1ページに表示するコラムの数
+    start = (page - 1) * per_page
+    end = start + per_page
+    paginated_weblogs = sorted_weblogs[start:end]  # 表示する範囲のコラムを取得
+    total_pages = (len(weblogs) - 1) // per_page + 1  # 全ページ数を計算
+    
+    return render_template('weblog.html', weblogs=paginated_weblogs, page=page, total_pages=total_pages)
 
-# Weblogページの遷移先
+# Weblogの個別コラムページ
+@app.route('/weblog/column<int:column>')
+def weblog_column(column):
+    total_columns = len(weblogs)  # 総コラム数を取得
+    return render_template(f"weblog_columns/column{column}.html", column=column, total_columns=total_columns)
 
-@app.route('/weblog/column11')
-def weblog_column11():
-    return render_template("weblog_columns/column11.html")
-
-@app.route('/weblog/column10')
-def weblog_column10():
-    return render_template("weblog_columns/column10.html")
-
-@app.route('/weblog/column9')
-def weblog_column9():
-    return render_template("weblog_columns/column9.html")
-
-@app.route('/weblog/column8') 
-def weblog_column8():
-    return render_template("weblog_columns/column8.html")
-
-@app.route('/weblog/column7')
-def weblog_column7():
-    return render_template("weblog_columns/column7.html")
-
-@app.route('/weblog/column6')
-def weblog_column6():
-    return render_template("weblog_columns/column6.html")
-
-@app.route('/weblog/column5')
-def weblog_column5():
-    return render_template("weblog_columns/column5.html")
-
-@app.route('/weblog/column4')
-def weblog_column4():
-    return render_template("weblog_columns/column4.html")
-
-@app.route('/weblog/column3')
-def weblog_column3():
-    return render_template("weblog_columns/column3.html")
-
-@app.route('/weblog/column2')
-def weblog_column2():
-    return render_template("weblog_columns/column2.html")
-
-@app.route('/weblog/column1')
-def weblog_column1():
-    return render_template("weblog_columns/column1.html")
-
+# Worksページ
 @app.route('/works')
 def works():
     return render_template('works.html')

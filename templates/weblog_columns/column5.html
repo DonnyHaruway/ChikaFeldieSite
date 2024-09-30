@@ -37,4 +37,26 @@
     
 </div>
 
+<!-- ナビゲーションリンク -->
+<div class="column-navigation" style="display: flex; justify-content: space-between; margin-top: 20px;">
+    <!-- 次のコラムリンク（ない場合は表示しない） -->
+    {% if column < total_columns %}
+    <a class="nav-link-box" href="/weblog/column{{ column + 1 }}" style="flex: 1; margin: 0 10px; padding: 10px; text-align: center; background-color: rgb(79, 99, 43); color: white; border: 2px solid rgb(79, 99, 43); border-radius: 5px;">
+        next
+    </a>
+    {% endif %}
+
+    <!-- Weblogに戻るリンク -->
+    <a class="nav-link-box" href="/weblog" style="flex: 1; margin: 0 10px; padding: 10px; text-align: center; background-color: rgb(79, 99, 43); color: white; border: 2px solid rgb(79, 99, 43); border-radius: 5px;">
+        weblog
+    </a>
+
+    <!-- 前のコラムリンク（ない場合は表示しない） -->
+    {% if column > 1 %}
+    <a class="nav-link-box" href="/weblog/column{{ column - 1 }}" style="flex: 1; margin: 0 10px; padding: 10px; text-align: center; background-color: rgb(79, 99, 43); color: white; border: 2px solid rgb(79, 99, 43); border-radius: 5px;">
+        previous
+    </a>
+    {% endif %}
+</div>
+
 {% endblock %}

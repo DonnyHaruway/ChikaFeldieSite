@@ -6,12 +6,14 @@
 <h3>気まぐれコラム # 1</h3>
 
 <div class="column-content">
+    <!-- コラムの内容 -->
     この前Otis Reddingのアルバム『Otis Blue』を聴いてたら、『Respect』のベースラインが The Beatlesの『Drive My Car』のベースラインとかなり似てることに気づいた。調べてみると『Drive My Car』のレコーディング時期に George Harrisonが『Respect』を聴いてたらしい。
-    ビートルズの様々なアーティストへの「リスペクト」を感じる。 
+    ビートルズの様々なアーティストへの「リスペクト」を感じる。
     <p class="writer-name">
         by 小森晩成(Sax.vo)
     </p>
 </div>
+
 <div class="album-intro">
     <img class="column-album rounded-border" src="{{ url_for('static', filename='img/column_albums/column1-1.jpg') }}" alt="column-album"><br>
     Respect / Otis Redding<br>
@@ -28,4 +30,27 @@
     Apple Music<br>
     <a class="music-links" href="https://music.apple.com/jp/album/%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B4-%E3%83%9E%E3%82%A4-%E3%82%AB%E3%83%BC-2009-remaster/1441164359?i=1441164364">https://music.apple.com/jp/album/%E3%83%89%E3%83%A9%E3%82%A4%E3%83%B4-%E3%83%9E%E3%82%A4-%E3%82%AB%E3%83%BC-2009-remaster/1441164359?i=1441164364</a>
 </div>
+
+<!-- ナビゲーションリンク -->
+<div class="column-navigation" style="display: flex; justify-content: space-between; margin-top: 20px;">
+    <!-- 次のコラムリンク（ない場合は表示しない） -->
+    {% if column < total_columns %}
+    <a class="nav-link-box" href="/weblog/column{{ column + 1 }}" style="flex: 1; margin: 0 10px; padding: 10px; text-align: center; background-color: rgb(79, 99, 43); color: white; border: 2px solid rgb(79, 99, 43); border-radius: 5px;">
+        next
+    </a>
+    {% endif %}
+
+    <!-- Weblogに戻るリンク -->
+    <a class="nav-link-box" href="/weblog" style="flex: 1; margin: 0 10px; padding: 10px; text-align: center; background-color: rgb(79, 99, 43); color: white; border: 2px solid rgb(79, 99, 43); border-radius: 5px;">
+        weblog
+    </a>
+
+    <!-- 前のコラムリンク（ない場合は表示しない） -->
+    {% if column > 1 %}
+    <a class="nav-link-box" href="/weblog/column{{ column - 1 }}" style="flex: 1; margin: 0 10px; padding: 10px; text-align: center; background-color: rgb(79, 99, 43); color: white; border: 2px solid rgb(79, 99, 43); border-radius: 5px;">
+        previous
+    </a>
+    {% endif %}
+</div>
+
 {% endblock %}
