@@ -16,7 +16,8 @@ weblogs = [
     {"id": 9, "title": "気まぐれコラム＃９", "date": "2024.09.08", "link": "column9"},
     {"id": 10, "title": "気まぐれコラム＃１０", "date": "2024.09.15", "link": "column10"},
     {"id": 11, "title": "気まぐれコラム＃１１", "date": "2024.09.20", "link": "column11"},
-    {"id": 12, "title": "気まぐれコラム＃１２", "date": "2024.09.29", "link": "column12"}
+    {"id": 12, "title": "気まぐれコラム＃１２", "date": "2024.09.29", "link": "column12"},
+    {"id": 13, "title": "気まぐれコラム＃１３", "date": "2024.10.17", "link": "column13"},
 ]
 
 @app.route('/')
