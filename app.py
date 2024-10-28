@@ -18,6 +18,7 @@ weblogs = [
     {"id": 11, "title": "気まぐれコラム＃１１", "date": "2024.09.20", "link": "column11"},
     {"id": 12, "title": "気まぐれコラム＃１２", "date": "2024.09.29", "link": "column12"},
     {"id": 13, "title": "気まぐれコラム＃１３", "date": "2024.10.17", "link": "column13"},
+    {"id": 14, "title": "気まぐれコラム＃１４", "date": "2024.10.25", "link": "column14"},
 ]
 
 @app.route('/')
@@ -55,3 +56,4 @@ def works():
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=8888)
+    
