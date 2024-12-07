@@ -1,25 +1,22 @@
 from flask import Flask, render_template, request
 from datetime import datetime
+import sqlite3
+import os
 
+##### DBと紐づける
+db_dir = 'database'
+con = sqlite3.connect(os.path.join(db_dir, 'weblog_columns.sqlite'))
+cur = con.cursor()
+
+cur.execute("SELECT id, title, date, link FROM column_db")
+rows = cur.fetchall()
+
+# リスト形式に変換
+weblogs = [{'id': row[0], 'title': row[1], 'date': row[2], 'link': row[3]} for row in rows]
+con.close()
+
+###### Flask
 app = Flask(__name__)
-
-# 仮のコラムデータ（実際はデータベースなどから取得することを想定）
-weblogs = [
-    {"id": 1, "title": "気まぐれコラム＃１", "date": "2024.06.06", "link": "column1"},
-    {"id": 2, "title": "気まぐれコラム＃２", "date": "2024.06.16", "link": "column2"},
-    {"id": 3, "title": "気まぐれコラム＃３", "date": "2024.06.21", "link": "column3"},
-    {"id": 4, "title": "気まぐれコラム＃４", "date": "2024.07.01", "link": "column4"},
-    {"id": 5, "title": "気まぐれコラム＃５", "date": "2024.07.30", "link": "column5"},
-    {"id": 6, "title": "気まぐれコラム＃６", "date": "2024.08.16", "link": "column6"},
-    {"id": 7, "title": "気まぐれコラム＃７", "date": "2024.08.21", "link": "column7"},
-    {"id": 8, "title": "気まぐれコラム＃８", "date": "2024.08.31", "link": "column8"},
-    {"id": 9, "title": "気まぐれコラム＃９", "date": "2024.09.08", "link": "column9"},
-    {"id": 10, "title": "気まぐれコラム＃１０", "date": "2024.09.15", "link": "column10"},
-    {"id": 11, "title": "気まぐれコラム＃１１", "date": "2024.09.20", "link": "column11"},
-    {"id": 12, "title": "気まぐれコラム＃１２", "date": "2024.09.29", "link": "column12"},
-    {"id": 13, "title": "気まぐれコラム＃１３", "date": "2024.10.17", "link": "column13"},
-    {"id": 14, "title": "気まぐれコラム＃１４", "date": "2024.10.25", "link": "column14"},
-]
 
 @app.route('/')
 def index():
@@ -56,4 +53,3 @@ def works():
 
 if __name__ == '__main__':
     app.run(debug=True, host="0.0.0.0", port=8888)
-    
