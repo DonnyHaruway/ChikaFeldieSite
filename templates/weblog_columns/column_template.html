@@ -1,19 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %}Chika Feldie - Weblog - column1{% endblock %}
+{% block title %}Chika Feldie - Weblog - column{num}{% endblock %}
 
 {% block content %}
 <!-- title -->
-<h3> title </h3>
+<h3> 気まぐれコラム #{} </h3>
 <!-- column-content -->
 <div class="column-content">
     <p class="writer-name">
-        writer-name
+        by Name (part)
     </p>
 </div>
 <div class="album-intro">
     <!-- album-image -->
-    <img class="column-album rounded-border" src="{{ url_for('static', filename='img/column_albums/column1-1.jpg') }}" alt="column-album"><br>
+    <img class="column-album rounded-border" src="{{ url_for('static', filename='img/column_albums/') }}" alt="column-album"><br>
     <!-- Song / Artist -->
     Song / Artist<br>
     <br>
